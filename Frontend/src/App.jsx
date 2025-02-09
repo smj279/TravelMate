@@ -1,27 +1,24 @@
 import React from "react";
-import { useState } from 'react';
-import { Routes, Route, Link, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Navbar from './pages/navbar.jsx'; 
-import Footer from './pages/footer.jsx'; 
-import LandingPage from './pages/landingPage.jsx';
+import LoginPage from "./pages/loginPage.jsx";
+//import LandingPage from "./pages/landingPage.jsx"; // Import LandingPage
 
-import './App.css';
-import './styles/main.css';
-
+import "./App.css";
 
 function App() {
   return (
-    <div>     
-      <Navbar /> 
-      <Routes>
-
-        <Route path="/" element={<LandingPage />} /> 
-
-      </Routes>
-      <Footer />
-    
-    </div>
+    <Router>
+      <div>     
+        <Routes>
+          {/* Show LoginPage by default */}
+          <Route path="/login" element={<LoginPage />} />
+          
+          {/* Other routes */}
+          
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
