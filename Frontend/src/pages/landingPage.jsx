@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../allCss/landingPage.css"; // Import the external CSS file
 
 const LandingPage = () => {
+  useEffect(() => {
+    console.log("LandingPage component rendered");
+  }, []);
+
   return (
     <div className="landing-container">
       <div className="landing-box">
@@ -10,9 +14,7 @@ const LandingPage = () => {
         <p className="landing-description">
           Discover the best travel destinations and packages tailored just for you.
         </p>
-        <Link to="/login">
-          <button className="landing-button">Login</button>
-        </Link>
+        
       </div>
     </div>
   );
