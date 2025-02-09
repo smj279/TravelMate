@@ -1,23 +1,24 @@
-import React from 'react';
-import '../allCss/navbar.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../allCss/navbar.css";
 
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo">
-        <a href="#">TravelMate</a>
+        <Link to="/">TravelMate</Link> {/* Link to LandingPage */}
       </div>
       <div className="nav-container">
         <ul className="nav-links">
           <li>
-            <a href="#">Destination</a>
-            <a href="#">Travel-Packages</a>
-            <a href="#">Contact</a>
+            <Link to="/destination">Destination</Link>
+            <Link to="/travel-packages">Travel-Packages</Link>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
         <div className="auth-links">
-          <a href="#">Login</a>
-          <a href="#">Sign-Up</a>
+          <Link to="/login">Login</Link>
+          <Link to="/signup">Sign-Up</Link>
         </div>
       </div>
     </nav>
